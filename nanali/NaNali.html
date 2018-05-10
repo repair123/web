@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>jQuery Mobile</title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<style>
+   li { list-style:none; }
+  .picture { list-style:none; padding:0; margin:0; }
+  .picture li { float:left; width:50%;}
+  .picture li a {display:block; margin:5px; border: 1px }
+  .picture li img { display:block; width:50%;  height:auto;}
+  .picture li img:hover { display:block; width:100%;  height:auto;} 
+</style>
+</head>
+
+<body>
+<div data-theme="b">
+	<div data-role="page" id="home" data-theme="b">
+		<div data-role="header" data-theme="b">
+			<h1>NANALI STUDIO</h1>
+		</div>
+		<div data-role="content" style="text-align:center">
+				<img src="nanali.png" >
+			<ul data-role="listview" data-inset="true">
+				<li><a href="#intro">회사소개</a></li>
+				<li><a href="#movie" data-rel="dialog">대표작품</a></li>
+				<li><a href="#wizard3-1" data-rel="dialog">Project</a></li>
+				<li><a href="#gallery">Blog</a></li>
+			</ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<h4><a href="http://www.nanali.net/">NANALI STUDIO홈페이지</a></h4>
+		</div>
+	</div>
+	
+	<div data-role="page" id="intro" data-theme="b">
+		<div data-role="header" data-theme="b">
+			<a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>			
+			<h1>회사 소개</h1>
+		</div>
+		<div data-role="content">
+				<div  style="text-align:center">
+					<img src="1-1.png" height="280">
+				</div>			
+			<div data-role="collapsible-set" data-theme="b" data-content-theme="e">
+				<div data-role="collapsible" data-collapsed="false">
+					<h3>회사 소개</h3>
+					<p>우리가 만드는 것들이 시간떼우기용 컨텐츠가 되지 않도록 신경씁니다. 
+						좀 색다른 걸 즐길 수 있게하겠다는 생각들에 골몰합니다. 
+						기억할만한 작품을 남기겠다는 마음가짐으로 신경써서 작업합니다. 
+						컨텐츠 하나에, 세계 하나씩을 만듭니다. 그렇게 나날이의 매일매일이 쌓여갑니다.</p>
+				</div>
+				<div data-role="collapsible">
+					<h3>비전</h3>
+					<div  style="text-align:center">
+						<img src="1-2.png" height="400" width="600">
+					</div>
+					<p>우리의 목표는 좋은 게임을 만드는 것만은 아닙니다. 결국, 유저들에게 우리의 컨텐츠로 감동을 주는 겁니다.
+						 우리가 꿈꾸는 세계가 있고, 그걸 표현할 기발한 아이디어들이 많습니다. 
+						 그리고 우린, 그걸 어떤 방식으로 유저들에게 전하는 것이 최선일까 고민합니다. 
+						 그러니까, 우리의 작품이 꼭 게임일 필요는 없다는 겁니다. 만화일 수도 있고, 손으로 넘기는 책장 속에 담길 수도 있습니다. 
+						 여러분들이 사는 현실의 공간 한켠에 자리잡을 수도 있구요. 매체도, 우리에겐 아이디어입니다. </p>
+				</div>
+				<div data-role="collapsible" >
+					<h3>연혁</h3>
+					<ul>
+						<li>2012년 : NANALI STUDIO 설립</li>
+						<li>2013년 : '후르츠어택' 출시 </li>
+						<li>2014년 : 중국 바이두와 아시아권 퍼블리싱 체결<br />
+								        미국 엔메스 엔터테이먼트와 퍼블리싱 체결</li>
+						<li>2015년  : '타임피쉬' 출시 및 앱스토어 피쳐드<br />
+							'후르츠어택 ' 글로벌 출시</li>
+						<li>2016년 : '샐리의 법칙' 구글 인디게임 페스티벌 TOP3 및 스팀&글로벌 출시	</li>
+						<li>2017년 : '후르츠어택 VR' 샌프란시스코 GDC 참가</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<h4><a href="http://www.nanali.net/">NANALI STUDIO홈페이지</a></h4>
+		</div>		
+	</div>
+	
+	<div data-role="page" id="movie" data-theme="b">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>
+			<h1>대표 작품</h1>
+		</div>
+		
+		<div data-role="content" >
+			<div class="ui-bar ui-bar-e">샐리의 법칙</div><br/>
+			<li><iframe width="100%" height="240" src="https://www.youtube.com/watch?v=bjQ2jrBHZsw"></iframe></li><br/>
+			<div class="ui-bar ui-bar-e">후르츠어택</div><br/>
+			<li><video controls width="100%" preload="metadata">
+				<source src="attack.mp4" type="video/mp4">
+			</video></li>
+		</div>
+		<div data-role="footer" data-theme="b">
+		</div>
+	</div>
+	
+	<div data-role="page" id="wizard3-1">
+		<div data-role="header">
+			<h1>Project</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e">후르츠어택 VR</div><br/>
+			
+			<li><video controls width="100%" preload="metadata">
+				<source src="Fruit Attacks VR(Alpha version).mp4" type="video/mp4">
+			</audio>	
+			<img src="3-1.jpg" alt="" width="100%">
+		</div>
+		<div data-role="footer">
+			<a href="#home"  data-direction="reverse">Home</a>
+			<a href="#wizard3-2" data-rel="dialog" data-transition="slide">영상</a>
+		</div>
+	</div>
+	<div data-role="page" id="gallery"  data-theme="b">
+		<div data-role="header" data-position="fixed"  data-theme="b">
+			<a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>
+			<h1>Blog</h1>
+		</div>
+		<div data-role="content">
+            <ul class="picture">
+				<li><a href="4-1.jpg" rel="external"><img src="4-1.jpg" /></a></li>	
+				<li><a href="4-2.png" rel="external"><img src="4-2.png" /></a></li>	
+				<li><a href="4-3.jpg" rel="external"><img src="4-3.jpg" /></a></li>	
+				<li><a href="4-4.jpg" rel="external"><img src="4-4.jpg" /></a></li>	
+				<li><a href="4-5.jpg" rel="external"><img src="4-5.jpg" /></a></li>	
+				<li><a href="4-6.png" rel="external"><img src="4-6.png" /></a></li>	
+				<li><a href="4-7.jpg" rel="external"><img src="4-7.jpg" /></a></li>	
+				<li><a href="4-8.jpg" rel="external"><img src="4-8.jpg" /></a></li>	
+				<li><a href="4-9.jpg" rel="external"><img src="4-9.jpg" /></a></li>	 
+            </ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<h4><a href="http://www.nanali.net/">NANALI STUDIO홈페이지</a></h4>
+		</div>		
+	</div>
+</div>	
+</body>
+</html>
